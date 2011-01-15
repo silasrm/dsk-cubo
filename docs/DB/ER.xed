@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram version="1.0" type="MySQL" versionMajor="5" versionMinor="0">
+   <Table id="0" name="funcionarios" schema="" database="">
+      <Column id="1" name="id" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="2" name="nome" type="varchar" length="200" nulls="true"/>
+      <Column id="3" name="matricula" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="4" name="salario" type="double" length="25" nulls="true"/>
+      <Column id="5" name="telefone" type="varchar" length="15" nulls="true"/>
+      <Column id="6" name="endereco" type="varchar" length="250" nulls="true"/>
+      <Column id="7" name="cep" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="8" name="estado" type="varchar" length="2" nulls="true"/>
+      <Column id="9" name="data_nascimento" type="date" length="25" nulls="true"/>
+      <Column id="10" name="cargo_id" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="11" name="unidade_trabalho_id" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+   </Table>
+   <Table id="12" name="unidades_trabalho" schema="" database="">
+      <Column id="13" name="id" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="14" name="descricao" type="varchar" length="100" nulls="true"/>
+   </Table>
+   <Table id="15" name="tipos" schema="" database="">
+      <Column id="16" name="id" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="17" name="descricao" type="varchar" length="100" nulls="true"/>
+   </Table>
+   <Table id="18" name="cargos" schema="" database="">
+      <Column id="19" name="id" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="20" name="descricao" type="varchar" length="100" nulls="true"/>
+   </Table>
+   <Table id="21" name="vendas" schema="" database="">
+      <Column id="22" name="id" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="23" name="nome" type="varchar" length="150" nulls="true"/>
+      <Column id="24" name="quantidade" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="25" name="preco" type="double" length="25" nulls="true"/>
+      <Column id="26" name="funcionario_id" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+      <Column id="27" name="tipo_id" type="int" length="25" nulls="true">
+         <CP name="PRECISION">15</CP>
+      </Column>
+   </Table>
+   <Relation id="28" name="fk_funcionarios_vendas" cardinality="-2" identifying="true" nulls="false">
+      <FK>1</FK>
+      <PK>26</PK>
+      <Text></Text>
+   </Relation>
+   <Relation id="29" name="fk_unidades_trabalho_funcionarios" cardinality="-2" identifying="true" nulls="false">
+      <FK>13</FK>
+      <PK>11</PK>
+      <Text></Text>
+   </Relation>
+   <Relation id="30" name="fk_tipos_vendas" cardinality="-2" identifying="true" nulls="false">
+      <FK>16</FK>
+      <PK>27</PK>
+      <Text></Text>
+   </Relation>
+   <Relation id="31" name="fk_cargos_funcionarios" cardinality="-2" identifying="true" nulls="false">
+      <FK>19</FK>
+      <PK>10</PK>
+      <Text></Text>
+   </Relation>
+   <Sheet name="Vendas" id="32" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true">
+      <Place id="28" visible="true">500,0,0,0</Place>
+      <Place id="30" visible="true" options="140.0,310.0,200.0,71.0,480.0,260.0,201.0,131.0,4,340.0,350.0,410.0,350.0,410.0,340.0,480.0,340.0">478,-11,0,0</Place>
+      <Place id="15" visible="true">140,310,200,71</Place>
+      <Place id="0" visible="true">450,0,271,221</Place>
+      <Place id="21" visible="true">480,260,201,131</Place>
+      <Place id="12" visible="true">90,10,201,71</Place>
+      <Place id="31" visible="true" options="80.0,160.0,201.0,61.0,450.0,0.0,271.0,221.0,4,281.0,170.0,370.0,170.0,370.0,140.0,450.0,140.0">447,18,1,0</Place>
+      <Place id="18" visible="true">80,160,201,61</Place>
+      <Place id="29" visible="true" options="90.0,10.0,201.0,71.0,450.0,0.0,271.0,221.0,4,291.0,60.0,350.0,60.0,350.0,120.0,450.0,120.0">474,13,-1,0</Place>
+   </Sheet>
+   <Settings sheet="32" zoom="1.0"></Settings>
+</Diagram>
